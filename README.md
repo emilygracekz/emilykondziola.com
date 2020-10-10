@@ -1,2 +1,2 @@
 # emilykondziola.com
-portfolio reactor
+portfolio refactor
