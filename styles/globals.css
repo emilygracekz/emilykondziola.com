@@ -1,0 +1,23 @@
+html,
+body {
+  background: radial-gradient(
+    circle,
+    rgba(111, 229, 229, 1) 0%,
+    rgba(84, 160, 255, 1) 0%,
+    rgba(150, 235, 220, 1) 100%
+  );
+
+  padding: 0.5rem;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
