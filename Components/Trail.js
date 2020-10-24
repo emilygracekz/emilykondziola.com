@@ -1,13 +1,12 @@
 import { useTrail, a } from 'react-spring';
-import { useState } from 'React';
 
 const Trail = ({ open, children, ...props }) => {
   const items = React.Children.toArray(children);
   const trail = useTrail(items.length, {
-    config: { mass: 5, tension: 3000, friction: 900 },
+    config: { mass: 4, tension: 400, friction: 200 },
     opacity: open ? 1 : 0,
     x: open ? 0 : 20,
-    height: open ? 110 : 0,
+    height: open ? 70 : 0,
     from: { opacity: 0, x: 20, height: 0 },
   });
   return (
