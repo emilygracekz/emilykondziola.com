@@ -42,10 +42,10 @@ const Home = () => {
     .subHeading {
       display: flex;
       align-items: center;
-      margin-top: 0.7rem;
+      margin-top: 3rem;
     }
 
-    @media screen and (min-width: 702px) {
+    @media screen and (min-width: 862px) {
       h1 {
         font-size: 4rem;
       }
@@ -94,14 +94,13 @@ const Home = () => {
                 </div>
               </div>
             </Trail>
-            <footer>{/* <p>emilygracekondziola@gmail.com</p> */}</footer>
           </div>
           <ProjectCard
             headline={'Nomad Discover'}
             body={
               'An app that suggests where digital nomads should go next. Nomad Discover takes criteria like budget and weather to suggest a place for nomads to go based off data from Nomad List.'
             }
-            sitePic={'images/nomaddiscover.png'}
+            sitePic={'nomaddiscover.png'}
             repo={'https://github.com/emilygracekz/nomadDiscover'}
             liveSite={'https://emilygracekz.github.io/nomadDiscover/'}
             image={'images/logos.png'}
