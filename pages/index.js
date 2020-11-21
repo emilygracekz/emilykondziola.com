@@ -10,10 +10,10 @@ const Home = () => {
     justify-content: center;
     height: 100%;
 
-    h1 {
+    .name {
       text-transform: capitalize;
-      letter-spacing: 0.05rem;
       font-size: 2rem;
+      width: 60%;
       color: black;
       margin-bottom: 0rem;
       text-align: center;
@@ -27,17 +27,6 @@ const Home = () => {
     .subHeading {
       display: flex;
       align-items: center;
-      margin-top: 3rem;
-    }
-
-    .grid {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      align-content: stretch;
-      //  align-items:
     }
 
     .stack {
@@ -47,14 +36,18 @@ const Home = () => {
       margin: 0 0.4rem;
     }
 
+    .grid {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: stretch;
+    }
+
     @media screen and (min-width: 702px) {
-      h1 {
+      .name {
         font-size: 2rem;
         width: 20%;
-      }
-
-      .subHeading {
-        margin-top: 0.1rem;
       }
     }
   `;
@@ -78,7 +71,7 @@ const Home = () => {
       <section>
         <div css={Container}>
           <div css={Banner}>
-            <h1>Emily Grace Kondziola</h1>
+            <h1 className='name'>Emily Grace Kondziola</h1>
             <div className='subHeading'>
               <h2>
                 Software Engineer at Jogg 🤸‍♀️

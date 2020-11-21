@@ -26,10 +26,11 @@ const ProjectCard = ({ headline, body, sitePic, alt, repo, liveSite }) => {
       text-align: center;
     }
 
-    img {
+    .previewImage {
       height: 15rem;
       border-radius: 1rem;
       object-fit: cover;
+      border: .1rem dotted lightgray;
     }
 
     .description {
@@ -48,7 +49,6 @@ const ProjectCard = ({ headline, body, sitePic, alt, repo, liveSite }) => {
       border-radius: 1rem;
       padding: .5rem;   
       text-align: center;
-  
     }
   `;
 
