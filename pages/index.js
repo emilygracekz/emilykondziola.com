@@ -14,7 +14,7 @@ const Home = () => {
     h1 {
       text-transform: uppercase;
       letter-spacing: 0.05rem;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: white;
       margin-bottom: 0rem;
       text-shadow: 4px 4px #0e2480;
@@ -25,6 +25,16 @@ const Home = () => {
       color: white;
       font-size: 1rem;
       text-shadow: 1px 1px #0e2480;
+    }
+
+    .projects {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: space-around;
     }
 
     .jogg {
@@ -42,10 +52,10 @@ const Home = () => {
     .subHeading {
       display: flex;
       align-items: center;
-      margin-top: 0.7rem;
+      margin-top: 3rem;
     }
 
-    @media screen and (min-width: 702px) {
+    @media screen and (min-width: 862px) {
       h1 {
         font-size: 4rem;
       }
@@ -94,18 +104,32 @@ const Home = () => {
                 </div>
               </div>
             </Trail>
-            <footer>{/* <p>emilygracekondziola@gmail.com</p> */}</footer>
           </div>
-          <ProjectCard
-            headline={'Nomad Discover'}
-            body={
-              'An app that suggests where digital nomads should go next. Nomad Discover takes criteria like budget and weather to suggest a place for nomads to go based off data from Nomad List.'
-            }
-            sitePic={'images/nomaddiscover.png'}
-            repo={'https://github.com/emilygracekz/nomadDiscover'}
-            liveSite={'https://emilygracekz.github.io/nomadDiscover/'}
-            image={'images/logos.png'}
-          />
+          <section>
+            <h1 className='projects'>selected projects</h1>
+            <div className='grid'>
+              <ProjectCard
+                headline={'Nomad Discover'}
+                body={
+                  'An app that suggests where digital nomads should go next. Nomad Discover takes criteria like budget and weather to suggest a place for nomads to go based off data from Nomad List.'
+                }
+                sitePic={'nomaddiscover.png'}
+                repo={'https://github.com/emilygracekz/nomadDiscover'}
+                liveSite={'https://emilygracekz.github.io/nomadDiscover/'}
+                image={'images/logos.png'}
+              />
+              <ProjectCard
+                headline={'Impromptu Timer'}
+                body={
+                  'A tool for college forensics competitors to practice impromptu speeches. This timer counts down from seven minutes and provides a random quotation when the start button is pressed.'
+                }
+                sitePic={'imptimer.png'}
+                repo={'https://github.com/emilygracekz/impromptu-timer'}
+                liveSite={'https://www.emilykondziola.com/impromptu-timer'}
+                image={'images/logos.png'}
+              />
+            </div>
+          </section>
         </div>
       </section>
     </section>

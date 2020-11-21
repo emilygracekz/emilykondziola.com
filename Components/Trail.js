@@ -3,10 +3,10 @@ import { useTrail, a } from 'react-spring';
 const Trail = ({ open, children, ...props }) => {
   const items = React.Children.toArray(children);
   const trail = useTrail(items.length, {
-    config: { mass: 4, tension: 400, friction: 200 },
+    config: { mass: 8, tension: 4000, friction: 200 },
     opacity: open ? 1 : 0,
-    x: open ? 0 : 20,
-    height: open ? 70 : 0,
+    x: open ? 0 : 10,
+    height: open ? 30 : 0,
     from: { opacity: 0, x: 20, height: 0 },
   });
   return (
