@@ -1,12 +1,6 @@
 html,
 body {
   /* background; */
-  /* background-image: linear-gradient(
-      to bottom,
-      rgba(84, 160, 255, 1),
-      rgba(150, 235, 220, 1)
-    ),
-    url('../public/dot-grid.png'); */
   padding: 0.5rem;
   margin: 0;
   width: 100%;

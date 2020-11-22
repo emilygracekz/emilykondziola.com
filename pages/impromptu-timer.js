@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Timer from '../components/Timer';
-import Quote from '../components/Quote';
+import Timer from '../Components/Timer';
+import Quote from '../Components/Quote';
 
 const ImpromptuTimer = () => {
   return (
