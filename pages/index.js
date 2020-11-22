@@ -59,7 +59,6 @@ const Home = () => {
     flex-direction: column;
     justify-content: center;
     border-radius: 0.5rem;
-    // height: 100vh;
   `;
 
   return (
@@ -74,7 +73,7 @@ const Home = () => {
             <h1 className='name'>Emily Grace Kondziola</h1>
             <div className='subHeading'>
               <h2>
-                Software Engineer at Jogg 🤸‍♀️
+                Software Engineer at Jogg
                 {/* <a href='https://studio.jogg.co/' className='jogg'> */}
                 {/* </a> */}
               </h2>
