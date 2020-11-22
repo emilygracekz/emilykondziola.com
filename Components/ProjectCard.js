@@ -8,7 +8,7 @@ const ProjectCard = ({ headline, body, sitePic, alt, repo, liveSite }) => {
     justify-content: center;
     border: 1px dotted lightgray;
     border-radius: 1rem;
-    width: 30rem;
+    width: 27rem;
     padding: 0.5rem;
     align-self: center;
     padding: 1.5rem;

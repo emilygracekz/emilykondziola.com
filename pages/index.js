@@ -29,6 +29,10 @@ const Home = () => {
       align-items: center;
     }
 
+    .jogg {
+      color: grey;
+    }
+
     .stack {
       display: flex;
       flex-direction: row;
@@ -73,9 +77,11 @@ const Home = () => {
             <h1 className='name'>Emily Grace Kondziola</h1>
             <div className='subHeading'>
               <h2>
-                Software Engineer at Jogg
-                {/* <a href='https://studio.jogg.co/' className='jogg'> */}
-                {/* </a> */}
+                Software Engineer at
+                <a href='https://studio.jogg.co/' className='jogg'>
+                  {' '}
+                  Jogg
+                </a>
               </h2>
               {/* <div>
                 <a href='https://github.com/emilygracekz'>
