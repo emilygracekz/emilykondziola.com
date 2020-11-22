@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Timer from '../components/timer';
-import Quote from '../components/quote';
+import Timer from '../components/Timer';
+import Quote from '../components/Quote';
 
 const ImpromptuTimer = () => {
   return (
@@ -16,9 +16,9 @@ const ImpromptuTimer = () => {
       </main>
 
       <footer>
-        <a href='https://github.com/emilygracekz'>
+        {/* <a href='https://github.com/emilygracekz'>
           <img src='/github.png' alt='github' className='logo' />
-        </a>
+        </a> */}
       </footer>
       <style jsx>{`
         .container {
