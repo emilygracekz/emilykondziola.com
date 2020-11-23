@@ -2,6 +2,7 @@
 import { css, jsx } from '@emotion/core';
 import Head from 'next/head';
 import ProjectCard from '../Components/ProjectCard.tsx';
+import 'react-toggle/style.css';
 
 const Home = () => {
   const Container = css`
@@ -9,6 +10,11 @@ const Home = () => {
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    align-items: center;
 
     .name {
       text-transform: capitalize;
@@ -17,6 +23,7 @@ const Home = () => {
       color: black;
       margin-bottom: 0rem;
       text-align: center;
+      margin-top: 8rem;
     }
 
     h2 {
@@ -27,6 +34,7 @@ const Home = () => {
     .subHeading {
       display: flex;
       align-items: center;
+      margin-bottom: 4rem;
     }
 
     .jogg {
@@ -56,15 +64,6 @@ const Home = () => {
     }
   `;
 
-  const Banner = css`
-    height: 20rem;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 0.5rem;
-  `;
-
   return (
     <section>
       <Head>
@@ -73,17 +72,16 @@ const Home = () => {
       </Head>
       <section>
         <div css={Container}>
-          <div css={Banner}>
-            <h1 className='name'>Emily Grace Kondziola</h1>
-            <div className='subHeading'>
-              <h2>
-                Software Engineer at
-                <a href='https://studio.jogg.co/' className='jogg'>
-                  {' '}
-                  Jogg
-                </a>
-              </h2>
-              {/* <div>
+          <h1 className='name'>Emily Grace Kondziola</h1>
+          <div className='subHeading'>
+            <h2>
+              Software Engineer at
+              <a href='https://studio.jogg.co/' className='jogg'>
+                {' '}
+                Jogg
+              </a>
+            </h2>
+            {/* <div>
                 <a href='https://github.com/emilygracekz'>
                   <img src='github-logo.png' alt='github' height='25' />
                 </a>
@@ -91,7 +89,6 @@ const Home = () => {
                   <img src='linkedinlogo.png' alt='linkedin' height='25' />
                 </a>
               </div> */}
-            </div>
           </div>
           <div className='grid'>
             <ProjectCard

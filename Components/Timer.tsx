@@ -60,6 +60,7 @@ const Timer = () => {
     </StyledTimer>
   );
 };
+
 const StyledTimer = styled.div`
   .container {
     display: flex;
