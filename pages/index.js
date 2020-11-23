@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import Head from 'next/head';
-import ProjectCard from '../Components/ProjectCard';
+import ProjectCard from '../Components/ProjectCard.tsx';
 
 const Home = () => {
   const Container = css`
@@ -100,7 +100,6 @@ const Home = () => {
               sitePic='nomaddiscover.png'
               repo='https://github.com/emilygracekz/nomadDiscover'
               liveSite='https://emilygracekz.github.io/nomadDiscover/'
-              image='images/logos.png'
             />
             <ProjectCard
               headline='Impromptu Timer'
@@ -108,7 +107,6 @@ const Home = () => {
               sitePic='imptimer.png'
               repo='https://github.com/emilygracekz/impromptu-timer'
               liveSite='https://www.emilykondziola.com/impromptu-timer'
-              image='images/logos.png'
             />
           </div>
         </div>
