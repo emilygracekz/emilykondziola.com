@@ -1,7 +1,24 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
+import { FunctionComponent } from 'react';
 
-const ProjectCard = ({ headline, body, sitePic, alt, repo, liveSite }) => {
+interface Props {
+  headline: string;
+  body: string;
+  sitePic: string;
+  alt: string;
+  repo: string;
+  liveSite: string;
+}
+
+const ProjectCard: FunctionComponent<Props> = ({
+  headline,
+  body,
+  sitePic,
+  alt,
+  repo,
+  liveSite,
+}) => {
   const Container = css`
     display: flex;
     flex-direction: column;
