@@ -29,8 +29,13 @@ const Home = () => {
       align-items: center;
     }
 
-    .jogg {
-      color: grey;
+    a {
+      // color: grey;
+      background: linear-gradient(to right, #c5327b, #ea4a26);
+      background-position: bottom;
+      background-size: 100% 2px;
+      background-repeat: no-repeat;
+      text-decoration: none;
     }
 
     .stack {
@@ -77,9 +82,8 @@ const Home = () => {
             <h1 className='name'>Emily Grace Kondziola</h1>
             <div className='subHeading'>
               <h2>
-                Software Engineer at
+                Software Engineer at{' '}
                 <a href='https://studio.jogg.co/' className='jogg'>
-                  {' '}
                   Jogg
                 </a>
               </h2>
