@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  background: linear-gradient(to left, blue, green);
+  background: linear-gradient(to left, #41e975, #335cc5);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
