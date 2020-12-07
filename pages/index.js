@@ -10,17 +10,24 @@ const Home = () => {
     justify-content: center;
     height: 100%;
 
-    .name {
+    .name,
+    .projects {
       text-transform: capitalize;
       font-size: 2rem;
       width: 60%;
-      color: black;
+      color: #015c92;
       margin-bottom: 0rem;
       text-align: center;
     }
 
+    .projects {
+      font-size: 1.5rem;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
     h2 {
-      color: black;
+      color: #015c92;
       font-size: 1rem;
     }
 
@@ -30,14 +37,9 @@ const Home = () => {
     }
 
     .jogg {
-      color: grey;
-    }
-
-    .stack {
-      display: flex;
-      flex-direction: row;
-      height: 2rem;
-      margin: 0 0.4rem;
+      background: linear-gradient(to left, #c5327b, #ea4a26);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .grid {
@@ -66,24 +68,22 @@ const Home = () => {
   `;
 
   return (
-    <section>
+    <section css={Container}>
       <Head>
         <title>Emily Kondziola</title>
         <link rel='icon' href='home.png' />
       </Head>
       <section>
-        <div css={Container}>
-          <div css={Banner}>
-            <h1 className='name'>Emily Grace Kondziola</h1>
-            <div className='subHeading'>
-              <h2>
-                Software Engineer at
-                <a href='https://studio.jogg.co/' className='jogg'>
-                  {' '}
-                  Jogg
-                </a>
-              </h2>
-              {/* <div>
+        <div css={Banner}>
+          <h1 className='name'>Emily Grace Kondziola</h1>
+          <div className='subHeading'>
+            <h2>
+              Software Engineer at{' '}
+              <a href='https://studio.jogg.co/' className='jogg'>
+                Jogg
+              </a>
+            </h2>
+            {/* <div>
                 <a href='https://github.com/emilygracekz'>
                   <img src='github-logo.png' alt='github' height='25' />
                 </a>
@@ -91,24 +91,26 @@ const Home = () => {
                   <img src='linkedinlogo.png' alt='linkedin' height='25' />
                 </a>
               </div> */}
-            </div>
           </div>
-          <div className='grid'>
-            <ProjectCard
-              headline='Nomad Discover'
-              body='An app that suggests where digital nomads should go next. Nomad Discover takes criteria like budget and weather to suggest a place for nomads to go based off data from Nomad List.'
-              sitePic='nomaddiscover.png'
-              repo='https://github.com/emilygracekz/nomadDiscover'
-              liveSite='https://emilygracekz.github.io/nomadDiscover/'
-            />
-            <ProjectCard
-              headline='Impromptu Timer'
-              body='A tool for college forensics competitors to practice impromptu speeches. This timer counts down from seven minutes and provides a random quotation when the start button is pressed.'
-              sitePic='imptimer.png'
-              repo='https://github.com/emilygracekz/impromptu-timer'
-              liveSite='https://www.emilykondziola.com/impromptu-timer'
-            />
-          </div>
+        </div>
+      </section>
+      <section>
+        <h1 className='projects'>Selected Projects</h1>
+        <div className='grid'>
+          <ProjectCard
+            headline='Nomad Discover'
+            body='An app that suggests where digital nomads should go next. Nomad Discover takes criteria like budget and weather to suggest a place for nomads to go based off data from Nomad List.'
+            sitePic='nomaddiscover.png'
+            repo='https://github.com/emilygracekz/nomadDiscover'
+            liveSite='https://emilygracekz.github.io/nomadDiscover/'
+          />
+          <ProjectCard
+            headline='Impromptu Timer'
+            body='A tool for college forensics competitors to practice impromptu speeches. This timer counts down from seven minutes and provides a random quotation when the start button is pressed.'
+            sitePic='imptimer.png'
+            repo='https://github.com/emilygracekz/impromptu-timer'
+            liveSite='https://www.emilykondziola.com/impromptu-timer'
+          />
         </div>
       </section>
     </section>
