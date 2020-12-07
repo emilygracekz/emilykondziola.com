@@ -23,6 +23,7 @@ const Home = () => {
     .projects {
       font-size: 1.5rem;
       width: 100%;
+      margin-bottom: 0.5rem;
     }
 
     h2 {
