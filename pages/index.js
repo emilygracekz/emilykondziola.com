@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { css, jsx } from '@emotion/core';
 import Head from 'next/head';
 import ProjectCard from '../Components/ProjectCard.tsx';
@@ -7,10 +7,12 @@ import 'react-toggle/style.css';
 import Context from '../util/context';
 
 const Home = () => {
+  const [isDark, setIsDark] = useState(false);
   const { dispatch } = useContext(Context);
 
   const handleOnClick = () => {
     dispatch({ type: 'TOGGLE_DARK_MODE' });
+    setIsDark(!isDark);
   };
 
   const Container = css`
@@ -23,12 +25,13 @@ const Home = () => {
     justify-content: center;
     border-radius: 0.5rem;
     align-items: center;
+    text-align: center;
 
     .name,
     .projects {
       text-transform: capitalize;
       font-size: 2rem;
-      width: 60%;
+      text-align: center;
       color: #015c92;
       margin-bottom: 0rem;
       text-align: center;
@@ -49,7 +52,8 @@ const Home = () => {
     .subHeading {
       display: flex;
       align-items: center;
-      margin-bottom: 4rem;
+      text-align: center;
+      justify-content: center;
     }
 
     .jogg {
@@ -69,9 +73,19 @@ const Home = () => {
     @media screen and (min-width: 702px) {
       .name {
         font-size: 2rem;
-        width: 20%;
       }
     }
+  `;
+
+  const Button = css`
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
   `;
 
   return (
@@ -81,7 +95,9 @@ const Home = () => {
         <link rel='icon' href='home.png' />
       </Head>
       <section>
-        <button onClick={handleOnClick}>Toggle</button>
+        <button onClick={handleOnClick} css={Button}>
+          {isDark ? '🌞' : '🌒'}
+        </button>
         <div>
           <h1 className='name'>Emily Grace Kondziola</h1>
           <div className='subHeading'>
