@@ -16,18 +16,25 @@ const Home = () => {
     border-radius: 0.5rem;
     align-items: center;
 
-    .name {
+    .name,
+    .projects {
       text-transform: capitalize;
       font-size: 2rem;
       width: 60%;
-      color: black;
+      color: #015c92;
       margin-bottom: 0rem;
       text-align: center;
       margin-top: 8rem;
     }
 
+    .projects {
+      font-size: 1.5rem;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
     h2 {
-      color: black;
+      color: #015c92;
       font-size: 1rem;
     }
 
@@ -38,14 +45,9 @@ const Home = () => {
     }
 
     .jogg {
-      color: grey;
-    }
-
-    .stack {
-      display: flex;
-      flex-direction: row;
-      height: 2rem;
-      margin: 0 0.4rem;
+      background: linear-gradient(to left, #c5327b, #ea4a26);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .grid {
@@ -65,22 +67,34 @@ const Home = () => {
   `;
 
   return (
-    <section>
+    <section css={Container}>
       <Head>
         <title>Emily Kondziola</title>
         <link rel='icon' href='home.png' />
       </Head>
-      <div css={Container}>
-        <h1 className='name'>Emily Grace Kondziola</h1>
-        <div className='subHeading'>
-          <h2>
-            Software Engineer at
-            <a href='https://studio.jogg.co/' className='jogg'>
-              {' '}
-              Jogg
-            </a>
-          </h2>
+      <section>
+        <div css={Banner}>
+          <h1 className='name'>Emily Grace Kondziola</h1>
+          <div className='subHeading'>
+            <h2>
+              Software Engineer at{' '}
+              <a href='https://studio.jogg.co/' className='jogg'>
+                Jogg
+              </a>
+            </h2>
+            {/* <div>
+                <a href='https://github.com/emilygracekz'>
+                  <img src='github-logo.png' alt='github' height='25' />
+                </a>
+                <a href='https://www.linkedin.com/in/emilykondziola/'>
+                  <img src='linkedinlogo.png' alt='linkedin' height='25' />
+                </a>
+              </div> */}
+          </div>
         </div>
+      </section>
+      <section>
+        <h1 className='projects'>Selected Projects</h1>
         <div className='grid'>
           <ProjectCard
             headline='Nomad Discover'
@@ -97,7 +111,7 @@ const Home = () => {
             liveSite='https://www.emilykondziola.com/impromptu-timer'
           />
         </div>
-      </div>
+      </section>
     </section>
   );
 };

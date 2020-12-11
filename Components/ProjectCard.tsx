@@ -5,8 +5,6 @@ import { FunctionComponent } from 'react';
 interface Props {
   headline: string;
   body: string;
-  sitePic: string;
-  alt: string;
   repo: string;
   liveSite: string;
 }
@@ -14,8 +12,6 @@ interface Props {
 const ProjectCard: FunctionComponent<Props> = ({
   headline,
   body,
-  sitePic,
-  alt,
   repo,
   liveSite,
 }) => {
@@ -23,9 +19,9 @@ const ProjectCard: FunctionComponent<Props> = ({
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px dotted lightgray;
+    border: 1px dotted darkgray;
     border-radius: 1rem;
-    width: 27rem;
+    width: 20rem;
     padding: 0.5rem;
     align-self: center;
     padding: 1.5rem;
@@ -33,30 +29,30 @@ const ProjectCard: FunctionComponent<Props> = ({
     justify-content: center;
     text-align: center;
     margin: .5rem
+
 }
     
     h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin: 0rem;
       margin-bottom: .5rem;
       width: 100%;
-      text-align: center;
-    }
+      text-align: left;
+      color: #015c92;
 
-    .previewImage {
-      height: 15rem;
-      border-radius: 1rem;
-      object-fit: cover;
-      border: .1rem dotted lightgray;
     }
 
     .description {
       text-align: left;
+      color: #015c92;
+
     }
 
     .links {
       display: flex;
       justify-content: space-between;
+      color: #015c92;
+
     }
 
     .innerCard {
@@ -73,7 +69,6 @@ const ProjectCard: FunctionComponent<Props> = ({
     <section css={Container}>
       <div>
         <h1>{headline}</h1>
-        <img className='previewImage' src={sitePic} alt={alt} />
         <p className='description'>{body}</p>
         <div className='links'>
           <a href={repo}>REPO</a>
