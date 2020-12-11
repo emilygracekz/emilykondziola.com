@@ -1,10 +1,18 @@
 /** @jsx jsx */
+import { useContext } from 'react';
 import { css, jsx } from '@emotion/core';
 import Head from 'next/head';
 import ProjectCard from '../Components/ProjectCard.tsx';
 import 'react-toggle/style.css';
+import Context from '../util/context';
 
 const Home = () => {
+  const { dispatch } = useContext(Context);
+
+  const handleOnClick = () => {
+    dispatch({ type: 'TOGGLE_DARK_MODE' });
+  };
+
   const Container = css`
     display: flex;
     flex-direction: column;
@@ -73,7 +81,8 @@ const Home = () => {
         <link rel='icon' href='home.png' />
       </Head>
       <section>
-        <div css={Banner}>
+        <button onClick={handleOnClick}>Toggle</button>
+        <div>
           <h1 className='name'>Emily Grace Kondziola</h1>
           <div className='subHeading'>
             <h2>
@@ -99,14 +108,12 @@ const Home = () => {
           <ProjectCard
             headline='Nomad Discover'
             body='An app that suggests where digital nomads should go next. Nomad Discover takes criteria like budget and weather to suggest a place for nomads to go based off data from Nomad List.'
-            sitePic='nomaddiscover.png'
             repo='https://github.com/emilygracekz/nomadDiscover'
             liveSite='https://emilygracekz.github.io/nomadDiscover/'
           />
           <ProjectCard
             headline='Impromptu Timer'
             body='A tool for college forensics competitors to practice impromptu speeches. This timer counts down from seven minutes and provides a random quotation when the start button is pressed.'
-            sitePic='imptimer.png'
             repo='https://github.com/emilygracekz/impromptu-timer'
             liveSite='https://www.emilykondziola.com/impromptu-timer'
           />
