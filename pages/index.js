@@ -20,17 +20,9 @@ const Home = () => {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 0.5rem;
-    align-items: center;
-    text-align: center;
 
     .switch {
-      top: 2rem;
-      left: 27rem;
+      left: 85%;
     }
 
     .name,
@@ -78,6 +70,10 @@ const Home = () => {
     }
 
     @media screen and (min-width: 702px) {
+      .switch {
+        left: 90%;
+      }
+
       .name {
         font-size: 2rem;
       }
