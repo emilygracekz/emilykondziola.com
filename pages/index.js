@@ -5,6 +5,7 @@ import Head from 'next/head';
 import ProjectCard from '../Components/ProjectCard.tsx';
 import 'react-toggle/style.css';
 import Context from '../util/context';
+import Switch from 'react-switch';
 
 const Home = () => {
   const [isDark, setIsDark] = useState(false);
@@ -55,7 +56,10 @@ const Home = () => {
     }
 
     .jogg {
-      background: linear-gradient(to left, #c5327b, #ea4a26);
+      background: linear-gradient(
+        to left,
+        ${isDark ? '#f946ab, #ff8f5a' : '#c5327b, #ea4a26'}
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -75,17 +79,6 @@ const Home = () => {
     }
   `;
 
-  const Button = css`
-    width: 100%;
-    background: none;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-  `;
-
   return (
     <section css={Container}>
       <Head>
@@ -93,9 +86,13 @@ const Home = () => {
         <link rel='icon' href='home.png' />
       </Head>
       <section>
-        <button onClick={handleOnClick} css={Button}>
-          {isDark ? '🌞' : '🌒'}
-        </button>
+        <Switch
+          onChange={handleOnClick}
+          checked={isDark}
+          checkedIcon={false}
+          uncheckedIcon={false}
+        />
+
         <div>
           <h1 className='name'>Emily Grace Kondziola</h1>
           <div className='subHeading'>

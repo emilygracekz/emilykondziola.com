@@ -46,10 +46,11 @@ const ProjectCard: FunctionComponent<Props> = ({
 
     }
 
+    
+
     .links {
       display: flex;
       justify-content: space-between;
-
     }
 
     .innerCard {

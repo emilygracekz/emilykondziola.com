@@ -4,10 +4,6 @@ import Context from '../util/context';
 import Reducer from '../util/reducer';
 import Home from '../pages/index';
 
-const denimBlue = '#015c92';
-const darkBlue = '#000';
-const lightBlue = '#fff';
-
 export const GlobalStyles = createGlobalStyle`
 body, #root {
     background: ${({ theme }) => theme.background};
@@ -20,13 +16,12 @@ body, #root {
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
-    a {
-      background: linear-gradient(to left, #41e975, #335cc5);
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-decoration: none;
-      font-weight: 600;
-    }
+  a {
+    background: linear-gradient(to left, #41e975, #10bcf9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-weight: 600;
+  }
 
     * {
       box-sizing: border-box;
@@ -34,21 +29,25 @@ body, #root {
 }
 `;
 
+const darkBlue = '#015c92';
+const black = '#133072';
+const yellow = '#ffdd55';
+
 const light = {
-  text: denimBlue,
+  text: darkBlue,
   background: '#fff',
 };
 
 const dark = {
-  text: lightBlue,
-  background: darkBlue,
+  text: yellow,
+  background: black,
 };
 
 export default function Theme() {
   const [state, dispatch] = useReducer(Reducer, {
     isDark: false,
   });
-  console.log(state);
+
   return (
     <Context.Provider value={{ state, dispatch }}>
       <ThemeProvider theme={state.isDark ? dark : light}>
