@@ -3,6 +3,7 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import Context from '../util/context'
 import Reducer from '../util/reducer'
 import Home from '../pages/index'
+import { theme } from '../styles/theme'
 
 const GlobalStyles = createGlobalStyle`
 body, #root {
@@ -29,18 +30,14 @@ body, #root {
 }
 `
 
-const darkBlue = '#015c92'
-const black = '#133072'
-const yellow = '#ffdd55'
-
 const light = {
-  text: darkBlue,
+  text: theme.colors.darkBlue,
   background: '#fff',
 }
 
 const dark = {
-  text: yellow,
-  background: black,
+  text: theme.colors.yellow,
+  background: theme.colors.black,
 }
 
 export default function Theme() {

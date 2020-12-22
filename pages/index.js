@@ -5,6 +5,7 @@ import Head from 'next/head'
 import ProjectCard from '../Components/ProjectCard.tsx'
 import Context from '../util/context'
 import Switch from 'react-switch'
+import { theme } from '../styles/theme'
 
 const Home = () => {
   const [isDark, setIsDark] = useState(false)
@@ -68,13 +69,19 @@ const Home = () => {
       align-content: stretch;
     }
 
-    @media screen and (min-width: 702px) {
+    ${theme.mediaQuery.ipad} {
       .switch {
         left: 90%;
       }
 
       .name {
         font-size: 2rem;
+      }
+    }
+
+    ${theme.mediaQuery.desktop} {
+      .switch {
+        left: 95%;
       }
     }
   `
