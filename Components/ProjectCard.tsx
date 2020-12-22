@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
-import { FunctionComponent } from 'react';
+import { css, jsx } from '@emotion/core'
+import { FunctionComponent } from 'react'
 
 interface Props {
-  headline: string;
-  body: string;
-  repo: string;
-  liveSite: string;
+  headline: string
+  body: string
+  repo: string
+  liveSite: string
 }
 
 const ProjectCard: FunctionComponent<Props> = ({
@@ -58,7 +58,7 @@ const ProjectCard: FunctionComponent<Props> = ({
       padding: .5rem;   
       text-align: center;
     }
-  `;
+  `
 
   return (
     <section css={Container}>
@@ -71,7 +71,7 @@ const ProjectCard: FunctionComponent<Props> = ({
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ProjectCard;
+export default ProjectCard

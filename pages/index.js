@@ -1,19 +1,19 @@
 /** @jsx jsx */
-import { useContext, useState } from 'react';
-import { css, jsx } from '@emotion/core';
-import Head from 'next/head';
-import ProjectCard from '../Components/ProjectCard.tsx';
-import Context from '../util/context';
-import Switch from 'react-switch';
+import { useContext, useState } from 'react'
+import { css, jsx } from '@emotion/core'
+import Head from 'next/head'
+import ProjectCard from '../Components/ProjectCard.tsx'
+import Context from '../util/context'
+import Switch from 'react-switch'
 
 const Home = () => {
-  const [isDark, setIsDark] = useState(false);
-  const { dispatch } = useContext(Context);
+  const [isDark, setIsDark] = useState(false)
+  const { dispatch } = useContext(Context)
 
   const handleOnClick = () => {
-    dispatch({ type: 'TOGGLE_DARK_MODE' });
-    setIsDark(!isDark);
-  };
+    dispatch({ type: 'TOGGLE_DARK_MODE' })
+    setIsDark(!isDark)
+  }
 
   const Container = css`
     display: flex;
@@ -77,7 +77,7 @@ const Home = () => {
         font-size: 2rem;
       }
     }
-  `;
+  `
 
   return (
     <section css={Container}>
@@ -131,7 +131,7 @@ const Home = () => {
         </div>
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

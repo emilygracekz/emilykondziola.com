@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Timer from '../Components/Timer';
-import Quote from '../Components/Quote';
+import Head from 'next/head'
+import Timer from '../Components/Timer'
+import Quote from '../Components/Quote'
 
 const ImpromptuTimer = () => {
   return (
@@ -90,7 +90,7 @@ const ImpromptuTimer = () => {
         }
       `}</style>
     </div>
-  );
-};
+  )
+}
 
-export default ImpromptuTimer;
+export default ImpromptuTimer

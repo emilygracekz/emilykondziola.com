@@ -1,8 +1,8 @@
-import React, { useReducer } from 'react';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
-import Context from '../util/context';
-import Reducer from '../util/reducer';
-import Home from '../pages/index';
+import React, { useReducer } from 'react'
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import Context from '../util/context'
+import Reducer from '../util/reducer'
+import Home from '../pages/index'
 
 const GlobalStyles = createGlobalStyle`
 body, #root {
@@ -27,26 +27,26 @@ body, #root {
       box-sizing: border-box;
     }
 }
-`;
+`
 
-const darkBlue = '#015c92';
-const black = '#133072';
-const yellow = '#ffdd55';
+const darkBlue = '#015c92'
+const black = '#133072'
+const yellow = '#ffdd55'
 
 const light = {
   text: darkBlue,
   background: '#fff',
-};
+}
 
 const dark = {
   text: yellow,
   background: black,
-};
+}
 
 export default function Theme() {
   const [state, dispatch] = useReducer(Reducer, {
     isDark: false,
-  });
+  })
 
   return (
     <Context.Provider value={{ state, dispatch }}>
@@ -57,5 +57,5 @@ export default function Theme() {
         </>
       </ThemeProvider>
     </Context.Provider>
-  );
+  )
 }
