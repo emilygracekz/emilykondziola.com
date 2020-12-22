@@ -32,7 +32,6 @@ const Home = () => {
       text-transform: capitalize;
       font-size: 2rem;
       text-align: center;
-      color: #015c92;
       margin-bottom: 0rem;
       text-align: center;
       margin-top: 8rem;
@@ -45,7 +44,6 @@ const Home = () => {
     }
 
     h2 {
-      color: #015c92;
       font-size: 1rem;
     }
 

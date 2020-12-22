@@ -38,20 +38,17 @@ const ProjectCard: FunctionComponent<Props> = ({
       margin-bottom: .5rem;
       width: 100%;
       text-align: left;
-      color: #015c92;
 
     }
 
     .description {
       text-align: left;
-      color: #015c92;
 
     }
 
     .links {
       display: flex;
       justify-content: space-between;
-      color: #015c92;
 
     }
 
