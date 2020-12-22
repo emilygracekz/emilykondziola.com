@@ -28,6 +28,11 @@ const Home = () => {
     align-items: center;
     text-align: center;
 
+    .switch {
+      top: 2rem;
+      left: 27rem;
+    }
+
     .name,
     .projects {
       text-transform: capitalize;
@@ -91,8 +96,8 @@ const Home = () => {
           checked={isDark}
           checkedIcon={false}
           uncheckedIcon={false}
+          className='switch'
         />
-
         <div>
           <h1 className='name'>Emily Grace Kondziola</h1>
           <div className='subHeading'>

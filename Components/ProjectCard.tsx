@@ -38,15 +38,12 @@ const ProjectCard: FunctionComponent<Props> = ({
       margin-bottom: .5rem;
       width: 100%;
       text-align: left;
-
     }
 
     .description {
       text-align: left;
 
     }
-
-    
 
     .links {
       display: flex;

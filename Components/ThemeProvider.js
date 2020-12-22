@@ -4,7 +4,7 @@ import Context from '../util/context';
 import Reducer from '../util/reducer';
 import Home from '../pages/index';
 
-export const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
 body, #root {
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.text};
@@ -17,7 +17,7 @@ body, #root {
   }
 
   a {
-    background: linear-gradient(to left, #41e975, #10bcf9);
+    background: linear-gradient(to left, #41e975, #335cc5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
     font-weight: 600;
