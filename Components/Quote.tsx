@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 
 function Quote() {
-  const [quote, setQuote] = useState('');
-  const [author, setAuthor] = useState('');
-  const [hyphen, setHyphen] = useState('');
+  const [quote, setQuote] = useState('')
+  const [author, setAuthor] = useState('')
+  const [hyphen, setHyphen] = useState('')
 
   const fetchData = async () => {
-    let data, result;
+    let data, result
     try {
-      data = await fetch('https://api.quotable.io/random');
-      result = await data.json();
+      data = await fetch('https://api.quotable.io/random')
+      result = await data.json()
     } catch (err) {
-      console.log(err);
+      console.log(err)
     }
-    return result;
-  };
+    return result
+  }
 
   const populateData = async () => {
-    const result = await fetchData();
-    setQuote(result.content);
-    setAuthor(result.author);
-    setHyphen('-');
-  };
+    const result = await fetchData()
+    setQuote(result.content)
+    setAuthor(result.author)
+    setHyphen('-')
+  }
 
   useEffect(() => {
-    populateData;
-  }, []);
+    populateData
+  }, [])
 
   return (
     <StyledProjects>
@@ -44,10 +44,10 @@ function Quote() {
         </div>
       </div>
     </StyledProjects>
-  );
+  )
 }
 
-export default Quote;
+export default Quote
 
 const StyledProjects = styled.div`
   .box {
@@ -72,7 +72,7 @@ const StyledProjects = styled.div`
       width: 700px;
     }
   }
-`;
+`
 
 const ButtonStyling = styled.div`
   .button {
@@ -93,4 +93,4 @@ const ButtonStyling = styled.div`
   .row {
     text-align: center;
   }
-`;
+`

@@ -1,39 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
 
 const Timer = () => {
-  const [seconds, setSeconds] = useState(420);
-  const [isActive, setIsActive] = useState(false);
+  const [seconds, setSeconds] = useState(420)
+  const [isActive, setIsActive] = useState(false)
 
   const reset = () => {
-    setSeconds(420);
-    setIsActive(false);
-  };
+    setSeconds(420)
+    setIsActive(false)
+  }
 
   const displayTimeLeft = (seconds) => {
-    const minutes = Math.floor(seconds / 60);
-    const remainderSeconds = seconds % 60;
+    const minutes = Math.floor(seconds / 60)
+    const remainderSeconds = seconds % 60
 
     if (seconds < 0) {
-      return '0:00';
+      return '0:00'
     } else {
-      return `${minutes}:${
-        remainderSeconds < 10 ? '0' : ''
-      }${remainderSeconds}`;
+      return `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`
     }
-  };
+  }
 
   useEffect(() => {
-    let interval = null;
+    let interval = null
     if (isActive) {
       interval = setInterval(() => {
-        setSeconds((seconds) => seconds - 1);
-      }, 1000);
+        setSeconds((seconds) => seconds - 1)
+      }, 1000)
     } else if (!isActive && seconds !== 0) {
-      clearInterval(interval);
+      clearInterval(interval)
     }
-    return () => clearInterval(interval);
-  }, [isActive, seconds]);
+    return () => clearInterval(interval)
+  }, [isActive, seconds])
 
   return (
     <StyledTimer>
@@ -58,8 +56,8 @@ const Timer = () => {
         </div>
       </div>
     </StyledTimer>
-  );
-};
+  )
+}
 
 const StyledTimer = styled.div`
   .container {
@@ -80,7 +78,7 @@ const StyledTimer = styled.div`
       padding: 3px;
     }
   }
-`;
+`
 
 const ButtonStyling = styled.div`
   .button {
@@ -111,6 +109,6 @@ const ButtonStyling = styled.div`
     border: 2px solid var(--darkPink);
     color: white;
   }
-`;
+`
 
-export default Timer;
+export default Timer

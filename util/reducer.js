@@ -3,10 +3,10 @@ const Reducer = (state = {}, action) => {
     case 'TOGGLE_DARK_MODE':
       return {
         isDark: !state.isDark,
-      };
+      }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default Reducer;
+export default Reducer
