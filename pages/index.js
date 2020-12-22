@@ -3,7 +3,6 @@ import { useContext, useState } from 'react';
 import { css, jsx } from '@emotion/core';
 import Head from 'next/head';
 import ProjectCard from '../Components/ProjectCard.tsx';
-import 'react-toggle/style.css';
 import Context from '../util/context';
 import Switch from 'react-switch';
 
