@@ -77,6 +77,12 @@ const Home = () => {
         font-size: 2rem;
       }
     }
+
+    @media screen and (min-width: 1200px) {
+      .switch {
+        left: 95%;
+      }
+    }
   `
 
   return (
