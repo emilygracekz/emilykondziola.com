@@ -2,6 +2,7 @@
 import { jsx, css } from '@emotion/react'
 import { FunctionComponent } from 'react'
 import { theme } from '../styles/theme'
+import { useMediaQuery } from 'react-responsive'
 
 interface Props {
   background: string
@@ -22,13 +23,15 @@ const Circle: FunctionComponent<Props> = ({
   right,
   bottom,
 }) => {
+  const isMobileOrIpad = useMediaQuery({ maxWidth: 940 })
+
   const CircleStyle = css`
     height: 190px;
     width: 190px;
     background: ${background};
     border-radius: 100%;
     position: absolute;
-    filter: blur(110px);
+    filter: ${isMobileOrIpad ? 'blur(100px)' : 'blur(170px)'};
     top: ${top};
     left: ${left};
     right: ${right};

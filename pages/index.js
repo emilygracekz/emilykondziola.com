@@ -7,9 +7,12 @@ import Context from '../util/context'
 import Switch from 'react-switch'
 import { theme } from '../styles/theme'
 import Circle from '../Components/Circle'
+import { useMediaQuery } from 'react-responsive'
+
 const Home = () => {
   const [isDark, setIsDark] = useState(true)
   const { dispatch } = useContext(Context)
+  const isMobileOrIpad = useMediaQuery({ maxWidth: 940 })
 
   const handleOnClick = () => {
     dispatch({ type: 'TOGGLE_DARK_MODE' })
@@ -127,10 +130,10 @@ const Home = () => {
           <>
             <Circle
               background='rgb(100,182,93)'
-              height='350px'
-              width='350px'
-              top='10px'
-              left='50px'
+              height='250px'
+              width='250px'
+              top='0px'
+              left={isMobileOrIpad ? '50px' : '500px'}
             />
             <Circle
               background='rgb(129,94,221)'
@@ -141,9 +144,10 @@ const Home = () => {
             />
             <Circle
               background='rgb(74,139,244)'
-              height='300px'
-              width='300px'
-              bottom='0px'
+              height='400px'
+              width='400px'
+              bottom={isMobileOrIpad ? '0px' : '20px'}
+              left={isMobileOrIpad ? '0px' : '100px'}
             />
           </>
         ) : (
