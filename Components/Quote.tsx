@@ -11,9 +11,7 @@ function Quote() {
     try {
       data = await fetch('https://api.quotable.io/random')
       result = await data.json()
-    } catch (err) {
-      console.log(err)
-    }
+    } catch (err) {}
     return result
   }
 

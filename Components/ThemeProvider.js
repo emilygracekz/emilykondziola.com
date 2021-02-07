@@ -31,18 +31,18 @@ body, #root {
 `
 
 const light = {
-  text: theme.colors.darkBlue,
+  text: theme.colors.lightBlue,
   background: '#fff',
 }
 
 const dark = {
-  text: theme.colors.yellow,
-  background: theme.colors.black,
+  text: '#fff',
+  background: theme.colors.darkBlue,
 }
 
-export default function Theme() {
+const Theme = () => {
   const [state, dispatch] = useReducer(Reducer, {
-    isDark: false,
+    isDark: true,
   })
 
   return (
@@ -56,3 +56,5 @@ export default function Theme() {
     </Context.Provider>
   )
 }
+
+export default Theme

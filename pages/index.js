@@ -6,9 +6,9 @@ import ProjectCard from '../Components/ProjectCard.tsx'
 import Context from '../util/context'
 import Switch from 'react-switch'
 import { theme } from '../styles/theme'
-
+import Circle from '../Components/Circle'
 const Home = () => {
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(true)
   const { dispatch } = useContext(Context)
 
   const handleOnClick = () => {
@@ -33,16 +33,23 @@ const Home = () => {
       margin-bottom: 0rem;
       text-align: center;
       margin-top: 8rem;
+      z-index: 1;
     }
 
     .projects {
       font-size: 1.5rem;
       width: 100%;
       margin-bottom: 0.5rem;
+      z-index: 1;
+    }
+
+    .name {
+      z-index: 1;
     }
 
     h2 {
       font-size: 1rem;
+      z-index: 1;
     }
 
     .subHeading {
@@ -101,7 +108,7 @@ const Home = () => {
           className='switch'
         />
         <div>
-          <h1 className='name'>Emily Grace Kondziola</h1>
+          <h1 className='name'>Emily Kondziola</h1>
           <div className='subHeading'>
             <h2>
               Software Engineer at{' '}
@@ -121,6 +128,46 @@ const Home = () => {
         </div>
       </section>
       <section>
+        {isDark ? (
+          <>
+            <Circle
+              background='rgb(100,182,93)'
+              height='150px'
+              width='150px'
+              top='10px'
+              left='40px'
+            />
+            <Circle
+              background='rgb(129,94,221)'
+              height='160px'
+              width='160px'
+              top='250px'
+              right='20px'
+            />
+            <Circle
+              background='rgb(74,139,244)'
+              height='200px'
+              width='200px'
+              bottom='2px'
+            />
+          </>
+        ) : (
+          ''
+        )}
+        {/* <Circle
+          background='rgb(227,140,78)'
+          height='190px'
+          width='190px'
+          top='200px'
+          left='600px'
+        />
+        <Circle
+          background='rgb(202,56,50)'
+          height='220px'
+          width='220px'
+          top='10px'
+          left='600px'
+        /> */}
         <h1 className='projects'>Selected Projects</h1>
         <div className='grid'>
           <ProjectCard
