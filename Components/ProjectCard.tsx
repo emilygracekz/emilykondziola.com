@@ -19,7 +19,7 @@ const ProjectCard: FunctionComponent<Props> = ({
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px dotted darkgray;
+    border: 1px dotted rgb(100, 182, 93);
     border-radius: 1rem;
     width: 20rem;
     padding: 0.5rem;
@@ -28,21 +28,18 @@ const ProjectCard: FunctionComponent<Props> = ({
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: .5rem
+    margin: 0.5rem;
 
-}
-    
     h1 {
       font-size: 1.5rem;
       margin: 0rem;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       width: 100%;
       text-align: left;
     }
 
     .description {
       text-align: left;
-
     }
 
     .links {
@@ -55,7 +52,7 @@ const ProjectCard: FunctionComponent<Props> = ({
       justify-content: center;
       flex-direction: column;
       border-radius: 1rem;
-      padding: .5rem;   
+      padding: 0.5rem;
       text-align: center;
     }
   `

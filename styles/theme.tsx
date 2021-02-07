@@ -5,8 +5,7 @@ export const theme = {
   },
 
   colors: {
-    darkBlue: '#015c92',
-    black: '#133072',
-    yellow: '#ffdd55',
+    lightBlue: '#015c92',
+    darkBlue: 'rgb(2, 0, 36)',
   },
 }
