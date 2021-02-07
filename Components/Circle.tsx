@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
 import { FunctionComponent } from 'react'
+import { theme } from '../styles/theme'
 
 interface Props {
   background: string
@@ -22,16 +23,21 @@ const Circle: FunctionComponent<Props> = ({
   bottom,
 }) => {
   const CircleStyle = css`
-    height: ${height};
-    width: ${width};
+    height: 190px;
+    width: 190px;
     background: ${background};
     border-radius: 100%;
     position: absolute;
-    filter: blur(90px);
+    filter: blur(110px);
     top: ${top};
     left: ${left};
     right: ${right};
     bottom: ${bottom};
+
+    ${theme.mediaQuery.ipad} {
+      height: ${height};
+      width: ${width};
+    }
   `
   return <div css={CircleStyle}></div>
 }

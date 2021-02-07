@@ -19,7 +19,7 @@ const ProjectCard: FunctionComponent<Props> = ({
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px dotted darkgray;
+    border: 1px dotted rgb(100, 182, 93);
     border-radius: 1rem;
     width: 20rem;
     padding: 0.5rem;
@@ -29,7 +29,6 @@ const ProjectCard: FunctionComponent<Props> = ({
     justify-content: center;
     text-align: center;
     margin: 0.5rem;
-    z-index: 1;
 
     h1 {
       font-size: 1.5rem;

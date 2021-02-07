@@ -43,13 +43,8 @@ const Home = () => {
       z-index: 1;
     }
 
-    .name {
-      z-index: 1;
-    }
-
     h2 {
       font-size: 1rem;
-      z-index: 1;
     }
 
     .subHeading {
@@ -132,42 +127,28 @@ const Home = () => {
           <>
             <Circle
               background='rgb(100,182,93)'
-              height='150px'
-              width='150px'
+              height='350px'
+              width='350px'
               top='10px'
-              left='40px'
+              left='50px'
             />
             <Circle
               background='rgb(129,94,221)'
-              height='160px'
-              width='160px'
-              top='250px'
+              height='360px'
+              width='360px'
+              top='300px'
               right='20px'
             />
             <Circle
               background='rgb(74,139,244)'
-              height='200px'
-              width='200px'
-              bottom='2px'
+              height='300px'
+              width='300px'
+              bottom='0px'
             />
           </>
         ) : (
           ''
         )}
-        {/* <Circle
-          background='rgb(227,140,78)'
-          height='190px'
-          width='190px'
-          top='200px'
-          left='600px'
-        />
-        <Circle
-          background='rgb(202,56,50)'
-          height='220px'
-          width='220px'
-          top='10px'
-          left='600px'
-        /> */}
         <h1 className='projects'>Selected Projects</h1>
         <div className='grid'>
           <ProjectCard
