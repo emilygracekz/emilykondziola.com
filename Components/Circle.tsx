@@ -31,7 +31,7 @@ const Circle: FunctionComponent<Props> = ({
     background: ${background};
     border-radius: 100%;
     position: absolute;
-    filter: ${isMobileOrIpad ? 'blur(100px)' : 'blur(170px)'};
+    filter: ${isMobileOrIpad ? 'blur(150px)' : 'blur(170px)'};
     top: ${top};
     left: ${left};
     right: ${right};

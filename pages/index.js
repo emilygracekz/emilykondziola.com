@@ -139,7 +139,7 @@ const Home = () => {
               background='rgb(129,94,221)'
               height='360px'
               width='360px'
-              top='300px'
+              top='100px'
               right='20px'
             />
             <Circle
