@@ -14,12 +14,6 @@ const ImpromptuTimer = () => {
         <Timer />
         <Quote />
       </main>
-
-      <footer>
-        {/* <a href='https://github.com/emilygracekz'>
-          <img src='/github.png' alt='github' className='logo' />
-        </a> */}
-      </footer>
       <style jsx>{`
         .container {
           min-height: 100vh;

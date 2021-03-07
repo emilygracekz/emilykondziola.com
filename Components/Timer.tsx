@@ -1,11 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
+/** @jsx jsx */
+import { jsx, css } from '@emotion/react'
+import { useState, useEffect, FunctionComponent } from 'react'
 
-const Timer = () => {
-  const [seconds, setSeconds] = useState(420)
+const Timer: FunctionComponent = () => {
+  const [seconds, setSeconds] = useState<number>(420)
   const [isActive, setIsActive] = useState(false)
 
-  const reset = () => {
+  const toggleIsActive = () => {
+    setIsActive(!isActive)
+  }
+
+  const resetTimer = () => {
     setSeconds(420)
     setIsActive(false)
   }
@@ -33,82 +38,76 @@ const Timer = () => {
     return () => clearInterval(interval)
   }, [isActive, seconds])
 
-  return (
-    <StyledTimer>
-      <div className='container'>
-        <div className='app'>
-          <div className='time'> {displayTimeLeft(seconds)}</div>
-          <ButtonStyling>
-            <div className='row'>
-              <button
-                className={`button button-primary button-primary-${
-                  isActive ? 'active' : 'inactive'
-                }`}
-                onClick={() => setIsActive(!isActive)}
-              >
-                {isActive ? 'Pause' : 'Start'}
-              </button>
-              <button className='button' onClick={reset}>
-                Reset
-              </button>
-            </div>
-          </ButtonStyling>
-        </div>
-      </div>
-    </StyledTimer>
-  )
-}
-
-const StyledTimer = styled.div`
-  .container {
+  const TimerStyle = css`
     display: flex;
     justify-content: center;
     flex-direction: column;
-  }
-  .time {
-    font-size: 8rem;
-    padding: 10px;
-    text-align: center;
-    color: var(--white);
-    font-weight: bold;
-  }
-  @media (min-width: 650px) {
-    .time {
-      font-size: 18rem;
-      padding: 3px;
-    }
-  }
-`
 
-const ButtonStyling = styled.div`
-  .button {
+    .time {
+      font-size: 8rem;
+      padding: 10px;
+      text-align: center;
+      color: var(--white);
+      font-weight: bold;
+    }
+
+    .row {
+      text-align: center;
+    }
+
+    @media (min-width: 650px) {
+      .time {
+        font-size: 16rem;
+        padding: 3px;
+      }
+    }
+  `
+
+  const ButtonStyle = css`
     padding: 0.6rem 1.5rem;
     margin: 10px;
     border-radius: 30px;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 0.8rem;
-  }
-  .row {
-    text-align: center;
-  }
-  .button:focus {
-    outline-width: 0;
-  }
-  .button-primary:hover {
-    background-color: var(--lightGray);
-    border: 2px solid var(--darkGray);
-  }
-  .button-primary-active {
-    background-color: var(--lightGray);
-    border: 2px solid var(--darkGray);
-    color: white;
-  }
-  .button-primary-inactive {
-    background-color: var(--lightPink);
-    border: 2px solid var(--darkPink);
-    color: white;
-  }
-`
+
+    .button-primary:hover {
+      background-color: var(--lightGray);
+      border: 2px solid var(--darkGray);
+    }
+
+    .button-primary-active {
+      background-color: var(--lightPink);
+      border: 2px solid var(--darkPink);
+      color: white;
+    }
+
+    .button-primary-inactive {
+      background-color: var(--lightPink);
+      border: 2px solid var(--darkPink);
+      color: white;
+    }
+  `
+
+  return (
+    <section css={TimerStyle}>
+      <div className='time'> {displayTimeLeft(seconds)}</div>
+      <div className='row' css={ButtonStyle}>
+        <button
+          css={ButtonStyle}
+          className={`button button-primary button-primary-${
+            isActive ? 'active' : 'inactive'
+          }`}
+          onClick={toggleIsActive}
+        >
+          {isActive ? 'Pause' : 'Start'}
+        </button>
+        <button className='button' css={ButtonStyle} onClick={resetTimer}>
+          Reset
+        </button>
+      </div>
+    </section>
+  )
+}
 
 export default Timer

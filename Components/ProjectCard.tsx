@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 import { FunctionComponent } from 'react'
+import Link from 'next/link'
 
 interface Props {
   headline: string
@@ -63,8 +64,12 @@ const ProjectCard: FunctionComponent<Props> = ({
         <h1>{headline}</h1>
         <p className='description'>{body}</p>
         <div className='links'>
-          <a href={repo}>REPO</a>
-          <a href={liveSite}>LIVE SITE</a>
+          <Link href={repo}>
+            <a href={repo}>REPO</a>
+          </Link>
+          <Link href='liveSite'>
+            <a href={liveSite}>LIVE SITE</a>
+          </Link>
         </div>
       </div>
     </section>
