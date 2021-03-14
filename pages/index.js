@@ -6,13 +6,10 @@ import ProjectCard from '../Components/ProjectCard.tsx'
 import Context from '../util/context'
 import Switch from 'react-switch'
 import { theme } from '../styles/theme'
-import Circle from '../Components/Circle'
-import { useMediaQuery } from 'react-responsive'
 
 const Home = () => {
   const [isDark, setIsDark] = useState(true)
   const { dispatch } = useContext(Context)
-  const isMobileOrIpad = useMediaQuery({ maxWidth: 940 })
 
   const handleOnClick = () => {
     dispatch({ type: 'TOGGLE_DARK_MODE' })
@@ -126,33 +123,6 @@ const Home = () => {
         </div>
       </section>
       <section>
-        {isDark ? (
-          <>
-            <Circle
-              background='rgb(100,182,93)'
-              height='250px'
-              width='250px'
-              top='0px'
-              left={isMobileOrIpad ? '50px' : '500px'}
-            />
-            <Circle
-              background='rgb(129,94,221)'
-              height='360px'
-              width='360px'
-              top='100px'
-              right='20px'
-            />
-            <Circle
-              background='rgb(74,139,244)'
-              height='400px'
-              width='400px'
-              bottom={isMobileOrIpad ? '0px' : '20px'}
-              left={isMobileOrIpad ? '0px' : '100px'}
-            />
-          </>
-        ) : (
-          ''
-        )}
         <h1 className='projects'>Selected Projects</h1>
         <div className='grid'>
           <ProjectCard
