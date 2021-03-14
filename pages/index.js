@@ -114,32 +114,45 @@ const Home = () => {
                 Jogg
               </a>
             </h2>
+            {/* <div>
+                <a href='https://github.com/emilygracekz'>
+                  <img src='github-logo.png' alt='github' height='25' />
+                </a>
+                <a href='https://www.linkedin.com/in/emilykondziola/'>
+                  <img src='linkedinlogo.png' alt='linkedin' height='25' />
+                </a>
+              </div> */}
           </div>
         </div>
       </section>
       <section>
-        <Circle
-          background='rgb(100,182,93)'
-          height='250px'
-          width='250px'
-          top='0px'
-          left={isMobileOrIpad ? '50px' : '500px'}
-        />
-        <Circle
-          background='rgb(129,94,221)'
-          height='360px'
-          width='360px'
-          top='100px'
-          right='20px'
-        />
-        <Circle
-          background='rgb(74,139,244)'
-          height='400px'
-          width='400px'
-          bottom={isMobileOrIpad ? '0px' : '20px'}
-          left={isMobileOrIpad ? '0px' : '100px'}
-        />
-
+        {isDark ? (
+          <>
+            <Circle
+              background='rgb(100,182,93)'
+              height='250px'
+              width='250px'
+              top='0px'
+              left={isMobileOrIpad ? '50px' : '500px'}
+            />
+            <Circle
+              background='rgb(129,94,221)'
+              height='360px'
+              width='360px'
+              top='100px'
+              right='20px'
+            />
+            <Circle
+              background='rgb(74,139,244)'
+              height='400px'
+              width='400px'
+              bottom={isMobileOrIpad ? '0px' : '20px'}
+              left={isMobileOrIpad ? '0px' : '100px'}
+            />
+          </>
+        ) : (
+          ''
+        )}
         <h1 className='projects'>Selected Projects</h1>
         <div className='grid'>
           <ProjectCard
