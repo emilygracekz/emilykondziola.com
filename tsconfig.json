@@ -20,7 +20,8 @@
     "**/*.tsx",
     "util/reducer.js",
     "util/context.js",
-    "Components/ThemeProvider.js"
+    "Components/ThemeProvider.js",
+    "pages/impromptu-timer.js"
   ],
   "exclude": ["node_modules"]
 }

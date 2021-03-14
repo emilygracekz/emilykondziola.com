@@ -67,7 +67,7 @@ const ProjectCard: FunctionComponent<Props> = ({
           <Link href={repo}>
             <a href={repo}>REPO</a>
           </Link>
-          <Link href='liveSite'>
+          <Link href={liveSite}>
             <a href={liveSite}>LIVE SITE</a>
           </Link>
         </div>
