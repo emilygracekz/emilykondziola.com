@@ -42,7 +42,7 @@ const dark = {
 
 const Theme = () => {
   const [state, dispatch] = useReducer(Reducer, {
-    isDark: false,
+    isDark: true,
   })
 
   return (

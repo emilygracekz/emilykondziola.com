@@ -111,6 +111,14 @@ const Home = () => {
                 Jogg
               </a>
             </h2>
+            {/* <div>
+                <a href='https://github.com/emilygracekz'>
+                  <img src='github-logo.png' alt='github' height='25' />
+                </a>
+                <a href='https://www.linkedin.com/in/emilykondziola/'>
+                  <img src='linkedinlogo.png' alt='linkedin' height='25' />
+                </a>
+              </div> */}
           </div>
         </div>
       </section>
