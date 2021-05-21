@@ -10,7 +10,7 @@ const Timer = () => {
     setIsActive(false)
   }
 
-  const displayTimeLeft = (seconds) => {
+  const displayTimeLeft = (seconds: number) => {
     const minutes = Math.floor(seconds / 60)
     const remainderSeconds = seconds % 60
 
@@ -22,7 +22,7 @@ const Timer = () => {
   }
 
   useEffect(() => {
-    let interval = null
+    let interval: number | null | undefined = null
     if (isActive) {
       interval = setInterval(() => {
         setSeconds((seconds) => seconds - 1)

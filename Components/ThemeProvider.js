@@ -1,9 +1,9 @@
 import React, { useReducer } from 'react'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
-import Context from '../util/context'
-import Reducer from '../util/reducer'
+import Context from '@util/context'
+import Reducer from '@util/reducer'
 import Home from '../pages/index'
-import { theme } from '../styles/theme'
+import { theme } from '@styles/theme'
 
 const GlobalStyles = createGlobalStyle`
 body, #root {
