@@ -2,10 +2,10 @@
 import { useContext, useState } from 'react'
 import { css, jsx } from '@emotion/core'
 import Head from 'next/head'
-import ProjectCard from '../Components/ProjectCard.tsx'
-import Context from '../util/context'
+import ProjectCard from '@components/ProjectCard'
+import Context from '@util/context'
 import Switch from 'react-switch'
-import { theme } from '../styles/theme'
+import { theme } from '@styles/theme'
 
 const Home = () => {
   const [isDark, setIsDark] = useState(true)
@@ -32,7 +32,7 @@ const Home = () => {
       text-align: center;
       margin-bottom: 0rem;
       text-align: center;
-      margin-top: 8rem;
+      margin-top: 7rem;
       z-index: 1;
     }
 
