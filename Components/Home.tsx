@@ -16,14 +16,6 @@ const Home = () => {
     setIsDark(!isDark)
   }
 
-  const Loading = css`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 10rem;
-  `
-
   const Container = css`
     display: flex;
     flex-direction: column;

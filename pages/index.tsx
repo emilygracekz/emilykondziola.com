@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import dynamic from 'next/dynamic'
+import Loading from '@components/Loading'
 const Home = dynamic(() => import('@components/Home'), {
-  loading: () => <p>hey lol</p>,
+  loading: () => <Loading />,
   ssr: false,
 })
 
