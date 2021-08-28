@@ -18,7 +18,7 @@ body, #root {
   }
 
   a {
-    background: linear-gradient(to left, #41e975, #335cc5);
+    background: linear-gradient(to left, #41e975, #3381c5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
     font-weight: 600;

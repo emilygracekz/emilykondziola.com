@@ -54,15 +54,6 @@ const Home = () => {
       justify-content: center;
     }
 
-    .jogg {
-      background: linear-gradient(
-        to left,
-        ${isDark ? '#f946ab, #ff8f5a' : '#c5327b, #ea4a26'}
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
     .grid {
       display: flex;
       flex-direction: row;
