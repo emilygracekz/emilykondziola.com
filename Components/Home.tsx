@@ -1,20 +1,20 @@
 /** @jsx jsx */
-import { useContext, useState } from 'react'
-import { css, jsx } from '@emotion/core'
-import Head from 'next/head'
-import ProjectCard from '@components/ProjectCard'
-import Context from '@util/context'
-import Switch from 'react-switch'
-import { theme } from '@styles/theme'
+import { useContext, useState } from "react";
+import { css, jsx } from "@emotion/core";
+import Head from "next/head";
+import BlogCard from "@components/BlogCard";
+import Context from "@util/context";
+import Switch from "react-switch";
+import { theme } from "@styles/theme";
 
 const Home = () => {
-  const [isDark, setIsDark] = useState(true)
-  const { dispatch } = useContext(Context)
+  const [isDark, setIsDark] = useState(true);
+  const { dispatch } = useContext(Context);
 
   const handleOnClick = () => {
-    dispatch({ type: 'TOGGLE_DARK_MODE' })
-    setIsDark(!isDark)
-  }
+    dispatch({ type: "TOGGLE_DARK_MODE" });
+    setIsDark(!isDark);
+  };
 
   const Container = css`
     display: flex;
@@ -77,13 +77,13 @@ const Home = () => {
         left: 95%;
       }
     }
-  `
+  `;
 
   return (
     <section css={Container}>
       <Head>
         <title>Emily Kondziola</title>
-        <link rel='icon' href='home.png' />
+        <link rel="icon" href="home.png" />
       </Head>
       <section>
         <Switch
@@ -91,47 +91,33 @@ const Home = () => {
           checked={isDark}
           checkedIcon={false}
           uncheckedIcon={false}
-          className='switch'
+          className="switch"
         />
         <div>
-          <h1 className='name'>Emily Kondziola</h1>
-          <div className='subHeading'>
+          <h1 className="name">Emily Kondziola</h1>
+          <div className="subHeading">
             <h2>
-              Software Engineer at{' '}
-              <a href='https://studio.jogg.co/' className='jogg'>
+              Software Engineer at{" "}
+              <a href="https://studio.jogg.co/" className="jogg">
                 Jogg
               </a>
             </h2>
-            {/* <div>
-                <a href='https://github.com/emilygracekz'>
-                  <img src='github-logo.png' alt='github' height='25' />
-                </a>
-                <a href='https://www.linkedin.com/in/emilykondziola/'>
-                  <img src='linkedinlogo.png' alt='linkedin' height='25' />
-                </a>
-              </div> */}
           </div>
         </div>
       </section>
       <section>
-        <h1 className='projects'>Selected Projects</h1>
-        <div className='grid'>
-          <ProjectCard
-            headline='Nomad Discover'
-            body='An app that suggests where digital nomads should go next. Nomad Discover takes criteria like budget and weather to suggest a place for nomads to go based off data from Nomad List.'
-            repo='https://github.com/emilygracekz/nomadDiscover'
-            liveSite='https://emilygracekz.github.io/nomadDiscover/'
-          />
-          <ProjectCard
-            headline='Impromptu Timer'
-            body='A tool for college forensics competitors to practice impromptu speeches. This timer counts down from seven minutes and provides a random quotation when the start button is pressed.'
-            repo='https://github.com/emilygracekz/impromptu-timer'
-            liveSite='https://www.emilykondziola.com/impromptu-timer'
-          />
-        </div>
+      
       </section>
+      <BlogCard 
+      headline="Why aren't my SVGs rendering in Safari?"
+      body="Recently for work I created a react component where I was passing in an SVG as a prop. Everything looked good in chrome, but when I tested in safari I realized my SVGs weren't showing up."
+      />
+      <BlogCard 
+      headline="My most used Bit commands"
+      body="Bit is a tool where you can upload components to the cloud so you can use them in other codebases, or import them to several files in one codebase."
+      />
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
