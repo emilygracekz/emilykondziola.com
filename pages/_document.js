@@ -15,6 +15,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
+        <meta name="description" content="Emily Kondziola | Software Engineer" />
         <body>
           <Main />
           <NextScript />
