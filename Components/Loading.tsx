@@ -11,7 +11,7 @@ const Loading = () => {
     text-align: center;
   `
 
-  return <p css={Loading}>WOW this website loads FAST</p>
+  return <p css={Loading}>💃 🕺</p>
 }
 
 export default Loading

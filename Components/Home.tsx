@@ -43,15 +43,14 @@ const Home = () => {
       z-index: 1;
     }
 
-    h2 {
-      font-size: 1rem;
-    }
+  
 
-    .subHeading {
+    .sub-heading {
       display: flex;
       align-items: center;
       text-align: center;
       justify-content: center;
+      font-size: 1rem;
     }
 
     .grid {
@@ -68,7 +67,11 @@ const Home = () => {
       }
 
       .name {
-        font-size: 2rem;
+        font-size: 5rem;
+      }
+
+      .sub-heading {
+        font-size: 1.5rem;
       }
     }
 
@@ -95,7 +98,7 @@ const Home = () => {
         />
         <div>
           <h1 className="name">Emily Kondziola</h1>
-          <div className="subHeading">
+          <div className="sub-heading">
             <h2>
               Software Engineer at{" "}
               <a href="https://studio.jogg.co/" className="jogg">
