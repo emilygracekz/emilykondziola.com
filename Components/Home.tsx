@@ -105,17 +105,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section>
-      
-      </section>
-      <BlogCard 
-      headline="Why aren't my SVGs rendering in Safari?"
-      body="Recently for work I created a react component where I was passing in an SVG as a prop. Everything looked good in chrome, but when I tested in safari I realized my SVGs weren't showing up."
-      />
-      <BlogCard 
-      headline="My most used Bit commands"
-      body="Bit is a tool where you can upload components to the cloud so you can use them in other codebases, or import them to several files in one codebase."
-      />
     </section>
   );
 };
