@@ -8,6 +8,7 @@ interface Props {
 }
 
 const ProjectCard: FunctionComponent<Props> = ({ headline, body }) => {
+  
   const Container = css`
     display: flex;
     flex-direction: column;
@@ -23,7 +24,7 @@ const ProjectCard: FunctionComponent<Props> = ({ headline, body }) => {
     text-align: center;
     margin: 0.5rem;
 
-    h1 {
+    .headline {
       font-size: 1.5rem;
       margin: 0rem;
       margin-bottom: 0.5rem;
@@ -34,8 +35,6 @@ const ProjectCard: FunctionComponent<Props> = ({ headline, body }) => {
     .description {
       text-align: left;
     }
-
-
 
     .innerCard {
       display: flex;
@@ -50,9 +49,8 @@ const ProjectCard: FunctionComponent<Props> = ({ headline, body }) => {
   return (
     <section css={Container}>
       <div>
-        <h1>{headline}</h1>
+        <h1 className="headline">{headline}</h1>
         <p className="description">{body}</p>
-        
       </div>
     </section>
   );

@@ -43,8 +43,6 @@ const Home = () => {
       z-index: 1;
     }
 
-  
-
     .sub-heading {
       display: flex;
       align-items: center;
