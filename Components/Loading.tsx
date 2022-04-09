@@ -12,11 +12,11 @@ const Loading = () => {
     text-align: center;
 
     ${theme.mediaQuery.ipad} {
-      font-size: 8rem;
+      font-size: 4rem;
     }
   `
 
-  return <p css={Loading}>💃 🕺</p>
+  return <p css={Loading}>Loading...</p>
 }
 
 export default Loading

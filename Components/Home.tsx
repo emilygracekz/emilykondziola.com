@@ -2,7 +2,6 @@
 import { useContext, useState } from "react";
 import { css, jsx } from "@emotion/core";
 import Head from "next/head";
-import BlogCard from "@components/BlogCard";
 import Context from "@util/context";
 import Switch from "react-switch";
 import { theme } from "@styles/theme";
