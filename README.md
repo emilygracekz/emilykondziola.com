@@ -1,2 +1,0 @@
-# emilykondziola.com
-portfolio refactor
